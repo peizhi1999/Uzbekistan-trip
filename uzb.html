@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>乌兹别克斯坦丝路行</title>
+<style>
+:root{--bg:#f6f1e7;--card:#fffdf8;--ink:#1c2b33;--mut:#6b7a80;--tq:#0f7b8a;--gold:#c8922b;--line:#e4dccb;--ok:#2e8b57;--warn:#c0562b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10181c;--card:#18242a;--ink:#eae6da;--mut:#93a3a9;--tq:#3ab0c0;--gold:#e0b050;--line:#2a3a42;--ok:#5fbf8a;--warn:#e88a5f}}
+:root[data-theme="dark"]{--bg:#10181c;--card:#18242a;--ink:#eae6da;--mut:#93a3a9;--tq:#3ab0c0;--gold:#e0b050;--line:#2a3a42;--ok:#5fbf8a;--warn:#e88a5f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding-bottom:84px}
+header{padding:22px 18px 16px;color:#fff;background:#0f6f7d repeating-conic-gradient(from 45deg,rgba(255,255,255,.09) 0 25%,transparent 0 50%) 0 0/30px 30px;border-bottom:4px solid var(--gold)}
+header h1{margin:0;font-size:21px}header p{margin:4px 0 0;font-size:13px;opacity:.9}
+main{padding:12px 14px}section{display:none}section.on{display:block}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;max-width:100%}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:6px 12px;font-size:13px;text-align:center}
+.chip.on{background:var(--tq);color:#fff;border-color:var(--tq)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 10px}
+h2{font-size:17px;margin:2px 0 4px}h3{font-size:14px;margin:12px 0 6px;color:var(--tq)}
+.sub{color:var(--mut);font-size:13px;margin-bottom:8px}
+.it{display:flex;gap:10px;padding:9px 0;border-top:1px dashed var(--line)}.it:first-of-type{border-top:0}
+.tm{flex:none;width:58px;color:var(--gold);font-weight:700;font-size:13px}
+.tx{flex:1}
+.go{display:inline-block;margin-top:5px;padding:4px 10px;border-radius:12px;background:var(--tq);color:#fff;text-decoration:none;font-size:12px}
+.cost{margin-top:6px;text-align:right;color:var(--mut);font-size:13px}
+.tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;border:1px solid;margin-left:6px}
+.ok{color:var(--ok)}.wait{color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:7px 4px;border-top:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--mut);font-weight:600}
+td.r,th.r{text-align:right}
+label{display:flex;gap:8px;align-items:flex-start;padding:4px 0}
+.fm{display:grid;grid-template-columns:1fr 1fr;gap:8px}.fm input,.fm select,.fm button{font:inherit;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-width:0}.fm #xn,.fm #xb{grid-column:1/3}.fm #xb{background:var(--tq);color:#fff;border:0}.del{border:0;background:none;color:var(--warn);font-size:12px}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding:6px 4px calc(8px + env(safe-area-inset-bottom,0px))}
+nav button{flex:1;border:0;background:none;color:var(--mut);font-size:11px;padding:4px 0;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav button b{font-size:20px;font-weight:400}nav button.on{color:var(--tq);font-weight:700}
+</style></head><body>
+<header><h1>🕌 乌兹别克斯坦丝路行</h1><p>2026/11/27 – 12/7 · 2 人 · 塔什干 · 希瓦 · 布哈拉 · 撒马尔罕</p></header>
+<main>
+<section id="s0" class="on"><div class="chips" id="chips"></div><div id="day"></div></section>
+<section id="s1"></section><section id="s2"></section><section id="s3"></section><section id="s4"></section>
+</main>
+<nav id="nav"></nav>
+<script>
+const M=q=>"https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(q);
+const D=[
+["11/27 五","抵达塔什干",25,[["12:30","到 KLIA T1 办理登机"],["17:00","Batik Air OD751 起飞（7h50）"],["21:50","抵达 TAS T2：入境、取行李、办当地 SIM","Tashkent International Airport Terminal 2"],["23:00","Yandex Go 到酒店（约 RM5–10）","Mamaris Saray Hotel Tashkent"]]],
+["11/28 六","塔什干老城 → 夜车",70,[["09:30","12:00 前退房寄存行李；Chorsu 市集","Chorsu Bazaar Tashkent"],["11:00","Kukeldash 神学院外观","Kukeldash Madrasa Tashkent"],["12:00","Hazrati Imam 建筑群：Barak-Khan、Tilla Sheikh","Hazrati Imam Complex Tashkent"],["13:30","午餐抓饭 Besh Qozon（RM15–25）","Besh Qozon Plov Center Tashkent"],["15:30","Minor 清真寺风景照（黄金时段约 16:30）","Minor Mosque Tashkent"],["20:15","取行李，叫车去南站（约 RM8）","Tashkent Janubiy railway station"],["21:45","056 次夜车发车 · 07 车厢 Lux 015/016 · 开车前 30 分钟完成登记"]]],
+["11/29 日","抵达希瓦",135,[["12:09","抵达希瓦站，Yandex Go 到古城西门（RM3–5）","Khiva railway station"],["13:00","入住 Isakhoja Boutique，午餐","Isakhoja Boutique Hotel Khiva"],["14:30","Ichan Kala：Kalta Minor、Islam Khodja 宣礼塔、Tosh Hovli（联票约 UZS250,000 ≈ RM88）","Ichan Kala Khiva"],["16:00","Kunya Ark 观景台拍日落（约 17:00）","Kunya Ark Khiva"],["18:00","晚餐，早睡"]]],
+["11/30 一","土库曼斯坦：火坑",35,[["约07:00","酒店出发去边境（约 40 分钟，以旅行社时间为准）。行李全带，过夜用品另装小包","Shavat border crossing Khiva"],["上午","边境会合、办出入境，参观 Kunya-Urgench 世界遗产（旅行社 +993 61909018）"],["下午","前往 Darvaza 火坑（约 4 小时）","Darvaza Gas Crater"],["傍晚","日落后看火坑，晚餐，住蒙古包（夜间可能低于 0°C）"]]],
+["12/1 二","跨境 → 布哈拉",75,[["早上","早餐，可在日出前拍火坑"],["中午起","司机送到靠近布哈拉的关口，办出入境，预计下午抵达"],["下午","Yandex Go 到布哈拉（约 1 小时，RM15–25），入住 Sarhad Boutique","Sarhad Boutique Hotel Bukhara"],["傍晚","Lyabi-Hauz 散步、晚餐（关口排队时间不定，预留缓冲）","Lyabi Hauz Bukhara"]]],
+["12/2 三","布哈拉全天",70,[["07:00","Kalyan 宣礼塔日出","Po-i-Kalyan Bukhara"],["09:00","Ark 城堡","Ark of Bukhara"],["10:30","Bolo Hauz 清真寺","Bolo Hauz Mosque Bukhara"],["11:30","Ismail Samani 陵墓、Chashma-Ayub","Ismail Samani Mausoleum Bukhara"],["14:30","商业穹顶、Chor Minor 四塔","Chor Minor Bukhara"],["16:30","Lyabi-Hauz 黄昏晚餐","Lyabi Hauz Bukhara"]]],
+["12/3 四","布哈拉 → 撒马尔罕",105,[["09:30","退房，叫车去布哈拉站（RM8–10）","Bukhara railway station"],["10:57","火车发车，12:41 抵达（待订：UZS169,810 ≈ RM60）"],["13:30","入住 Bibikhanum Hotel","Bibikhanum Hotel Samarkand"],["14:30","Bibi-Khanym 清真寺、Siyob 市集","Bibi-Khanym Mosque Samarkand"],["16:00","Gur-e-Amir 帖木儿陵（黄金时段）","Gur-e-Amir Mausoleum Samarkand"],["17:00","Registan 广场日落（据报道目前无灯光秀，现场确认）","Registan Samarkand"]]],
+["12/4 五","七湖一日游（塔吉克斯坦）",50,[["约06:30","酒店接送（以 GetYourGuide 订单为准，待订）"],["全天","经 Jartepa 口岸入塔吉克斯坦，Marguzor 七湖，全程 12–14 小时"],["20:00","约 20:00–21:00 返回撒马尔罕，晚餐"],["提醒","12 月可能降雪封路，订前向商家确认出团与退改规则；确认是否需塔吉克电子签证"]]],
+["12/5 六","撒马尔罕 → 塔什干",95,[["07:30","Shah-i-Zinda 陵墓群，开门即到（约 UZS50,000–80,000）","Shah-i-Zinda Samarkand"],["09:30","Ulugh Beg 天文台","Ulugh Beg Observatory Samarkand"],["11:00","再访 Registan 或补拍 Gur-e-Amir","Registan Samarkand"],["15:30","午餐、取行李，叫车去车站（RM8）","Samarkand railway station"],["17:40","火车发车，20:12 抵达（待订：UZS200,060 ≈ RM70；预算表写 4h，订票核对）"],["21:00","入住 Sayidat Tashkent Hotel","Sayidat Tashkent Hotel"]]],
+["12/6 日","塔什干 → 夜间航班",60,[["09:30","退房寄存行李。地铁（约 UZS3,000）：Kosmonavtlar、Alisher Navoi、Paxtakor、Mustaqillik Maydoni；拍照前先看告示","Kosmonavtlar metro station Tashkent"],["14:30","Amir Timur 广场、独立广场、买纪念品","Amir Timur Square Tashkent"],["19:45","取行李去机场 T2（RM8–10）","Tashkent International Airport Terminal 2"],["23:05","HY553 起飞，12/7 09:35 抵达 KUL"]]]
+];
+const T=[["KUL → 塔什干","Batik Air OD751","7h50","RM1,398",1],["塔什干 → 希瓦","夜车 056 · 07 车厢 Lux","14h24","UZS640,390 ≈ RM226",1],["土库曼斯坦两天","旅行社车（含关口送到布哈拉附近）","—","团费已付",1],["关口 → 布哈拉","Yandex Go / 司机协助","约1h","约 RM15–25",0],["布哈拉 → 撒马尔罕","UzRail 10:57–12:41","1h44","UZS169,810 ≈ RM60",0],["七湖一日游","GetYourGuide","12–14h","RM300",0],["撒马尔罕 → 塔什干","UzRail 17:40–20:12","约2.5h","UZS200,060 ≈ RM70",0],["塔什干 → KUL","Uzbekistan Airways HY553","7h30","RM1,322",1]];
+const H=[["Mamaris Saray","塔什干","1晚","11/27","Mamaris Saray Hotel Tashkent"],["夜车 056 次","","1晚","11/28",""],["Isakhoja Boutique","希瓦","1晚","11/29","Isakhoja Boutique Hotel Khiva"],["火坑蒙古包","土库曼斯坦","1晚","11/30",""],["Sarhad Boutique","布哈拉","2晚","12/1–12/2","Sarhad Boutique Hotel Bukhara"],["Bibikhanum","撒马尔罕","2晚","12/3–12/4","Bibikhanum Hotel Samarkand"],["Sayidat Tashkent","塔什干","1晚","12/5","Sayidat Tashkent Hotel"]];
+const P=[["证件与手续",["护照（有效期 6 个月以上）+ 复印件","土库曼斯坦签证/邀请函","塔吉克斯坦电子签证（先问商家）","旅游保险（含土库曼、塔吉克）","酒店住宿登记单（每间都留）"]],["保暖（白天 0–12°C，夜间可至 -5°C）",["羽绒外套","发热衣 + 毛衣","围巾、手套、毛帽、厚袜","防滑防水鞋 + 舒适步行鞋"]],["清真寺礼仪",["长裤/长裙，遮住肩膀与膝盖","女生备头巾"]],["蒙古包过夜",["小背包装一晚用品","睡袋内胆、暖宝宝","湿纸巾、手电筒"]],["电子与摄影",["转换插头（欧规圆孔）","充电宝","相机 + 备用电池（低温耗电快）","三脚架、擦镜布"]],["药品与其他",["肠胃药、感冒药","保湿霜、润唇膏","少量新钞美元 + 备用现金"]]];
+const B=[["机票",2500,2720],["住宿",1000,964.5],["交通",500,356.58],["景点（两个团）",1500,1600],["餐饮",500,0],["其他",500,0]];
+const $=s=>document.querySelector(s),f=n=>n.toLocaleString("en",{maximumFractionDigits:2});
+let cur=0;
+function day(){$("#chips").innerHTML=D.map((d,i)=>`<button class="chip${i==cur?" on":""}" data-i="${i}">D${i+1}<br>${d[0]}</button>`).join("")+`<button class="chip" disabled>12/7<br>抵达</button>`;
+const d=D[cur];$("#day").innerHTML=`<div class="card"><h2>Day ${cur+1} · ${d[1]}</h2><div class="sub">${d[0]}</div>`+d[3].map(x=>`<div class="it"><div class="tm">${x[0]}</div><div class="tx">${x[1]}${x[2]?`<br><a class="go" href="${M(x[2])}" target="_blank" rel="noopener">📍 导航</a>`:""}</div></div>`).join("")+`<div class="cost">今日预估花费 约 RM${d[2]}/人</div></div>`}
+$("#chips").onclick=e=>{const b=e.target.closest("[data-i]");if(b){cur=+b.dataset.i;day()}};
+$("#s1").innerHTML=`<div class="card"><h2>交通</h2><div class="sub">市内 Yandex Go，城际 UzRail。费用为每人。</div><table>`+T.map(t=>`<tr><td><b>${t[0]}</b><br><span class="sub">${t[1]} · ${t[2]}</span></td><td class="r">${t[3]}<br><span class="tag ${t[4]?"ok":"wait"}">${t[4]?"已订":"待订"}</span></td></tr>`).join("")+`</table></div><div class="card"><h3>提醒</h3>12/3、12/5 火车票请尽早在 UzRail 订；乘车前 30 分钟完成登记。</div>`;
+$("#s2").innerHTML=H.map(h=>`<div class="card"><b>${h[0]}</b><span class="tag ok">已订</span><div class="sub">${h[1]} · ${h[2]} · ${h[3]}</div>${h[4]?`<a class="go" href="${M(h[4])}" target="_blank" rel="noopener">📍 导航（地址以订单为准）</a>`:""}</div>`).join("");
+let sv={};try{sv=JSON.parse(localStorage.getItem("uzpk")||"{}")}catch(e){}
+$("#s3").innerHTML=P.map((g,i)=>`<div class="card"><h3>${g[0]}</h3>`+g[1].map((t,j)=>`<label><input type="checkbox" data-k="${i}-${j}"${sv[i+"-"+j]?" checked":""}> ${t}</label>`).join("")+`</div>`).join("")+`<div class="card"><h3>实用资讯</h3>网络：落地买 SIM（Ucell、Beeline）或提前买 eSIM，先装好 Yandex Go 与 UzRail。<br>换汇：约 UZS2,830 = RM1，用新钞美元；酒店大餐厅可刷卡，市集用现金。<br>入境：马来西亚护照一般免签乌兹别克，出发前以官方为准。</div>`;
+$("#s3").onchange=e=>{sv[e.target.dataset.k]=e.target.checked;try{localStorage.setItem("uzpk",JSON.stringify(sv))}catch(x){}};
+const tot=B.reduce((a,b)=>[a[0]+b[1],a[1]+b[2]],[0,0]);
+$("#s4").innerHTML=`<div class="card"><h2>预算（RM / 每人）</h2><table><tr><th>项目</th><th class="r">预算</th><th class="r">已订</th></tr>`+B.map(b=>`<tr><td>${b[0]}</td><td class="r">${f(b[1])}</td><td class="r">${b[2]?f(b[2]):"—"}</td></tr>`).join("")+`<tr><td><b>合计</b></td><td class="r"><b>${f(tot[0])}</b></td><td class="r"><b>${f(tot[1])}</b></td></tr></table><div class="sub" style="margin-top:8px">剩余约 RM${f(tot[0]-tot[1])}。每日预估花费合计约 RM${D.reduce((a,d)=>a+d[2],0)}（餐饮、车费、门票），缓冲约 RM${f(tot[0]-tot[1]-D.reduce((a,d)=>a+d[2],0))}。</div></div><div class="card"><h3>每日预估</h3><table>`+D.map((d,i)=>`<tr><td>D${i+1} ${d[0]}</td><td class="r">RM${d[2]}</td></tr>`).join("")+`</table></div>`;
+const R={RM:1,UZS:1/2830,USD:4.3},CT=["餐饮","交通","门票","购物","其他"],E=s=>String(s).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
+let X=[];try{X=JSON.parse(localStorage.getItem("uzex")||"[]")}catch(e){}
+function ex(){const rm=x=>x.a*R[x.c],t=X.reduce((a,x)=>a+rm(x),0);try{localStorage.setItem("uzex",JSON.stringify(X))}catch(e){}
+$("#ex").innerHTML=`<h2>旅途记账</h2><div class="sub">已记 RM${f(t)} · 剩余预算 RM${f(tot[0]-tot[1]-t)}</div>`+CT.map(c=>{const s=X.filter(x=>x.k==c).reduce((a,x)=>a+rm(x),0);return s?`<span class="tag">${c} RM${f(s)}</span>`:""}).join("")+`<table>`+X.map((x,i)=>`<tr><td>${E(x.d)}<br><span class="sub">${E(x.k)}${x.n?" · "+E(x.n):""}</span></td><td class="r">${f(x.a)} ${E(x.c)}<br><span class="sub">≈ RM${f(rm(x))}</span> <button class="del" data-x="${i}">删除</button></td></tr>`).join("")+`</table>`}
+$("#s4").insertAdjacentHTML("afterbegin",`<div class="card"><div id="ex"></div><h3>添加账单</h3><div class="fm"><input type="date" id="xd"><select id="xk">${CT.map(c=>`<option>${c}</option>`).join("")}</select><input id="xa" type="number" inputmode="decimal" placeholder="金额"><select id="xc"><option>RM</option><option>UZS</option><option>USD</option></select><input id="xn" placeholder="备注（选填）"><button id="xb">添加</button></div><div class="sub" style="margin-top:8px">汇率：UZS 2,830 = RM1，USD 1 ≈ RM4.3（估算）。账目只存在你自己的手机上。</div></div>`);
+$("#xd").value=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+$("#xb").onclick=()=>{const a=parseFloat($("#xa").value);if(!(a>0))return;X.unshift({d:$("#xd").value,k:$("#xk").value,a:a,c:$("#xc").value,n:$("#xn").value.trim()});$("#xa").value="";$("#xn").value="";ex()};
+$("#ex").onclick=e=>{const b=e.target.closest("[data-x]");if(b){X.splice(+b.dataset.x,1);ex()}};
+ex();
+const N=[["📅","行程"],["🚆","交通"],["🏨","住宿"],["🎒","行李"],["💰","预算"]];
+$("#nav").innerHTML=N.map((n,i)=>`<button data-t="${i}" class="${i?"":"on"}"><b>${n[0]}</b>${n[1]}</button>`).join("");
+$("#nav").onclick=e=>{const b=e.target.closest("[data-t]");if(!b)return;document.querySelectorAll("section").forEach((s,i)=>s.classList.toggle("on",i==b.dataset.t));document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("on",x==b));scrollTo(0,0)};
+day();
+</script></body></html>
